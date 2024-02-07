@@ -1,0 +1,178 @@
+footer.footer {
+    background-image: url('../../assets/images/footerBg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 125px 0 45px 0;
+    .selfsite {
+        width: calc(100% - 60px);
+        background-image: linear-gradient(to right top, #c74ec7, #b958d6, #a762e4, #916cf0, #7575fb);
+        margin: auto;
+        text-align: center;
+        border-radius: 20px;
+        padding: 60px;
+        margin-bottom: 110px;
+        .selfsite_inner {
+            color: #fff;
+            h2 {
+                font-size: 48px;
+                line-height: 60px;
+                font-family: 'PlusJakartaSans-ExtraBold';
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 20px;
+                line-height: 28px;
+                font-family: 'PlusJakartaSans-Medium';
+                margin: 35px 0;
+            }
+            button.whitebtn.btn.btn-primary {
+                background-color: #fff;
+                border-color: #fff;
+                color: #a762e4;
+                border-radius: 12px;
+                max-width: 270px;
+                font-size: 20px;
+                line-height: 28px;
+                width: 100%;
+                font-family: 'PlusJakartaSans-SemiBold';
+                padding: 16px 10px;
+            }    
+        }
+    }
+    .logo_wrapper {
+        p {
+            color: #fff;
+            font-family: 'PlusJakartaSans-Regular';
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 10px;
+        }
+    }
+    .contact_info {
+        margin-top: 66px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            font-family: 'PlusJakartaSans-Medium';
+        }
+    }
+    h4 {
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'PlusJakartaSans-SemiBold';
+    }
+    .footerMenu {
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                padding: 10px 0;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-family: 'PlusJakartaSans-Medium';
+                }
+            }
+        }
+    }
+    .copyright {
+        p {
+            color: #fff;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-family: 'PlusJakartaSans-Medium';
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .logo_wrapper {
+        a {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .logo_wrapper {
+        a {
+            img {
+                max-width: 170px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    footer.footer {
+        padding-top: 0;
+        .logo_wrapper {
+            a {
+                img {
+                    max-width: fit-content;
+                }
+            }
+        }
+        .container.trySelf {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 100%;
+            .row {
+                margin-left: 0px;
+                margin-right: 0px;
+                .col-sm-12 {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+            .selfsite {
+                width: 100%;
+                border-radius: 0px;
+                padding: 40px;
+                margin-bottom: 0px;
+                .selfsite_inner {
+                    h2 {
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 20px 0;
+                        br {
+                            display: none;
+                        }
+                    }
+                    button.whitebtn.btn.btn-primary {
+                        max-width: 220px;
+                        font-size: 17px;
+                        line-height: 28px;
+                        padding: 9px;
+                    }
+                }
+            }
+        }
+        .footerMenus {
+            margin-top: 45px;
+        }
+        .contact_info, .footerMenu {
+            margin-top: 44px;
+        }
+        .footerMenu {
+            ul {
+                margin-bottom: 0px;
+                li {
+                    padding: 6px 0;
+                }
+            }
+        }
+        .copyright {
+            margin-top: 40px;
+        }
+    }
+}
