@@ -1,0 +1,300 @@
+.PricePage {
+  .priceBanner {
+    background-image: url("../../assets/images/priceBg.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    .priceBannerContent {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      text-align: center;
+      color: #fff;
+      h1 {
+        font-family: "PlusJakartaSans-ExtraBold";
+        font-size: 52px;
+        line-height: normal;
+        margin-bottom: 25px;
+      }
+      .breadcrumb {
+        justify-content: center;
+        margin-bottom: 0;
+        ul {
+          display: flex;
+          align-items: center;
+          list-style: none;
+          margin-bottom: 0;
+          padding: 0;
+          justify-content: center;
+          li {
+            padding-right: 50px;
+            position: relative;
+            &::after {
+              background-image: url("../../assets/images/arrowRight.svg");
+              background-size: 20px 20px;
+              width: 20px;
+              height: 20px;
+              content: "";
+              position: absolute;
+              right: 15px;
+              top: 10px;
+            }
+            a,
+            span {
+              font-size: 24px;
+              text-decoration: none;
+              color: #fff;
+            }
+            &:last-child {
+              padding-right: 0px;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section.price_section {
+    padding: 100px 0 180px 0;
+    background-image: url("../../assets/images/price_bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    .price_content {
+      h2 {
+        font-size: 42px;
+        font-family: "PlusJakartaSans-ExtraBold";
+        color: #000;
+      }
+
+      p {
+        font-size: 20px;
+        font-family: "PlusJakartaSans-SemiBold";
+        color: #000;
+      }
+    }
+    .price_wrapper {
+      .price_tab_buttons {
+        .nav.nav-pills {
+          padding: 8px;
+          border-radius: 100px;
+          background: linear-gradient(
+            to right top,
+            #c74ec7,
+            #b958d6,
+            #a762e4,
+            #916cf0,
+            #7575fb
+          );
+          a.nav-link.active {
+            background-color: #000;
+          }
+          a.nav-link {
+            color: #fff;
+            border-radius: 100px;
+            padding: 7px 22px;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .price_tab_content {
+        padding: 80px 0 0 0;
+      }
+    }
+  }
+  section.trusted_section {
+    padding: 60px 0;
+    h2 {
+      font-size: 42px;
+      color: #2f2f2f;
+      margin-bottom: 60px;
+      font-family: "PlusJakartaSans-Bold";
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 0 25px;
+      }
+    }
+  }
+  section.faq_section {
+    padding-bottom: 130px;
+    h2 {
+      font-size: 42px;
+      color: #2f2f2f;
+      margin-bottom: 60px;
+      font-family: "PlusJakartaSans-Bold";
+    }
+    .faq_wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 0 15px;
+      .accordion-item {
+        border-bottom: none;
+        margin-bottom: 20px;
+        h2.accordion-header {
+          margin-bottom: 0;
+          button.accordion-button {
+            background-color: rgba(195, 184, 231, 0.2) !important;
+            border-radius: 7px !important;
+            box-shadow: none;
+            font-size: 16px;
+            font-family: "PlusJakartaSans-Bold";
+            padding: 12px 15px;
+          }
+        }
+        .accordion-collapse {
+          border-top: none !important;
+          .accordion-body {
+            color: #5c5c5c;
+            font-family: "PlusJakartaSans-SemiBold";
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query start */
+
+@media only screen and (max-width: 991px) {
+  .PricePage {
+    section.trusted_section {
+      ul {
+        max-width: 700px;
+        margin: auto;
+        li {
+          padding: 0 10px;
+          img {
+            height: 25px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .PricePage {
+    .priceBanner {
+      height: 300px;
+      .priceBannerContent {
+        top: 60%;
+        h1 {
+          font-size: 32px;
+          margin-bottom: 15px;
+        }
+        .breadcrumb {
+          ul {
+            li {
+              &::after {
+                background-size: 15px 15px;
+                width: 15px;
+                height: 15px;
+                top: 5px;
+                background-repeat: no-repeat;
+              }
+              a,span {
+                font-size: 16px;
+              }
+            }
+          }
+      }
+      }
+  }
+    section.price_section {
+      padding: 30px 0;
+      .price_content {
+        h2 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 14px;
+          br {
+            display: none;
+          }
+        }
+      }
+      .price_wrapper {
+        .price_tab_content {
+          padding: 30px 0 0 0;
+        }
+      }
+    }
+    section.trusted_section {
+      padding: 30px 0;
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      ul {
+        li {
+          img {
+            height: 20px;
+          }
+        }
+      }
+    }
+    section.faq_section {
+      padding-bottom: 30px;
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .faq_wrapper {
+        .accordion-item {
+          h2.accordion-header {
+            button.accordion-button {
+              font-size: 14px;
+              padding: 12px 15px;
+            }
+          }
+          .accordion-collapse {
+            .accordion-body {
+              font-size: 14px;
+              line-height: 20px;
+            }
+        }
+        }
+    }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .PricePage {
+    section.trusted_section {
+      ul {
+        flex-direction: column;
+        gap: 20px;
+        li {
+          img {
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .monthly_wrapper, .yearly_wrapper {
+    .price_block {
+      max-width: 90%;
+      margin:  15px auto;
+    }
+  }
+}

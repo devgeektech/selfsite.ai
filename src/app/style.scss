@@ -477,56 +477,7 @@ section.customer_swiper {
     }
 }
 @media only screen and (max-width: 991px) {
-    header.header {
-        nav.navbar {
-            .navbar-collapse {
-                background-color: #fff;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                .navbar-nav {
-                    padding: 40px 0 0 22px;
-                    a.nav-link {
-                        color: #000;
-                        font-size: 16px;
-                    }
-                    .dropdown-toggle {
-                        &::after {
-                            background-image: url('../assets/images/angleBlackBottom.svg');
-                        }
-                    }
-                }
-            }
-        }
-        .btns_wrap {
-            padding-left: 40px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-            padding-bottom: 40px;
-            &::before {
-                display: none;
-            }
-            button.btnprimary.btn.btn-primary {
-                margin-left: 0px;
-            }
-        }
-        .navbar-nav {
-            .dropdown-menu.show {
-                width: calc(100% - 20px);
-                a.dropdown-item {
-                    &:hover {
-                        background-image: linear-gradient(to right top, #c74ec7, #b958d6, #a762e4, #916cf0, #7575fb);
-                        color: #fff;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
+
     .banner {
         .bannerContent {
             h1 {

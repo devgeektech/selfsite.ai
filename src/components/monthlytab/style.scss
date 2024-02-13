@@ -1,0 +1,366 @@
+// .PricePage {
+// .priceBanner {
+//   background-image: url("../../assets/images/priceBg.jpg");
+//   background-position: center center;
+//   background-size: cover;
+//   height: 450px;
+//   position: relative;
+//   .priceBannerContent {
+//     position: absolute;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     top: 50%;
+//     text-align: center;
+//     color: #fff;
+//     h1 {
+//       font-family: "PlusJakartaSans-ExtraBold";
+//       font-size: 52px;
+//       line-height: normal;
+//       margin-bottom: 25px;
+//     }
+//     .breadcrumb {
+//       justify-content: center;
+//       margin-bottom: 0;
+//       ul {
+//         display: flex;
+//         align-items: center;
+//         list-style: none;
+//         margin-bottom: 0;
+//         padding: 0;
+//         justify-content: center;
+//         li {
+//           padding-right: 50px;
+//           position: relative;
+//           &::after {
+//             background-image: url("../../assets/images/arrowRight.svg");
+//             background-size: 20px 20px;
+//             width: 20px;
+//             height: 20px;
+//             content: "";
+//             position: absolute;
+//             right: 15px;
+//             top: 10px;
+//           }
+//           a,
+//           span {
+//             font-size: 24px;
+//             text-decoration: none;
+//             color: #fff;
+//           }
+//           &:last-child {
+//             padding-right: 0px;
+//             &::after {
+//               display: none;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// section.price_section {
+// padding: 100px 0 180px 0;
+// background-image: url("../../assets/images/price_bg.jpg");
+// background-position: center center;
+// background-size: cover;
+// .price_content {
+//   h2 {
+//     font-size: 42px;
+//     font-family: "PlusJakartaSans-ExtraBold";
+//     color: #000;
+//   }
+
+//   p {
+//     font-size: 20px;
+//     font-family: "PlusJakartaSans-SemiBold";
+//     color: #000;
+//   }
+// }
+// .price_wrapper {
+// .price_tab_buttons {
+//   .nav.nav-pills {
+//     padding: 8px;
+//     border-radius: 100px;
+//     background: linear-gradient(
+//       to right top,
+//       #c74ec7,
+//       #b958d6,
+//       #a762e4,
+//       #916cf0,
+//       #7575fb
+//     );
+//     a.nav-link.active {
+//       background-color: #000;
+//     }
+//     a.nav-link {
+//       color: #fff;
+//       border-radius: 100px;
+//       padding: 7px 22px;
+//       &:hover {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+// .price_tab_content {
+//   padding: 80px 0 0 0;
+.monthly_wrapper {
+  .free_block {
+    h2 {
+      padding: 80px 0;
+    }
+  }
+  .price_block {
+    box-shadow: 0 0 16px 0px rgba(50, 50, 71, 0.1);
+    border-radius: 15px;
+    padding: 32px 32px 80px 32px;
+    background: #fff;
+
+    h2 {
+      font-size: 68px;
+      color: #000;
+      font-family: "PlusJakartaSans-SemiBold";
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 0px;
+    }
+
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecee;
+      text-transform: capitalize;
+      color: #777777;
+      font-family: "PlusJakartaSans-Regular";
+      font-size: 16px;
+      img {
+        margin-right: 10px;
+      }
+    }
+    button.btnget {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 50px;
+      font-family: "PlusJakartaSans-SemiBold";
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .price_block.starter_block {
+    padding-top: 84px;
+    padding-bottom: 110px;
+    position: relative;
+    z-index: 1;
+    h4 {
+      font-size: 25px;
+      font-family: "PlusJakartaSans-SemiBold";
+      margin-bottom: 25px;
+    }
+    .priceBox {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 20px;
+      span {
+        font-size: 32px;
+        line-height: 32px;
+        font-family: "PlusJakartaSans-SemiBold";
+      }
+      strong {
+        font-size: 72px;
+        line-height: 72px;
+        font-family: "PlusJakartaSans-ExtraBold";
+        color: #000;
+      }
+    }
+    p {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: "PlusJakartaSans-Medium";
+    }
+    ul {
+      margin-top: 40px;
+    }
+  }
+  .price_block.professional_block {
+    padding-top: 55px;
+    padding-bottom: 80px;
+    h4 {
+      font-size: 25px;
+      font-family: "PlusJakartaSans-SemiBold";
+      margin-bottom: 25px;
+    }
+    .priceBox {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 20px;
+      span {
+        font-size: 32px;
+        line-height: 32px;
+        font-family: "PlusJakartaSans-SemiBold";
+      }
+      strong {
+        font-size: 72px;
+        line-height: 72px;
+        font-family: "PlusJakartaSans-ExtraBold";
+        color: #000;
+      }
+    }
+    p {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: "PlusJakartaSans-Medium";
+    }
+    ul {
+      margin-top: 40px;
+    }
+  }
+}
+//   }
+// }
+// }
+// section.trusted_section {
+//   padding: 60px 0;
+//   h2 {
+//     font-size: 42px;
+//     color: #2f2f2f;
+//     margin-bottom: 60px;
+//     font-family: "PlusJakartaSans-Bold";
+//   }
+//   ul {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     list-style: none;
+//     padding: 0;
+//     li {
+//       padding: 0 25px;
+//     }
+//   }
+// }
+// section.faq_section {
+//   padding-bottom: 130px;
+//   h2 {
+//     font-size: 42px;
+//     color: #2f2f2f;
+//     margin-bottom: 60px;
+//     font-family: "PlusJakartaSans-Bold";
+//   }
+//   .faq_wrapper {
+//     max-width: 900px;
+//     margin: auto;
+//     padding: 0 15px;
+//     .accordion-item {
+//       border-bottom: none;
+//       margin-bottom: 20px;
+//       h2.accordion-header {
+//           margin-bottom: 0;
+//           button.accordion-button {
+//               background-color: rgba(195, 184, 231, 0.2) !important;
+//               border-radius: 7px !important;
+//               box-shadow: none;
+//               font-size: 16px;
+//               font-family: "PlusJakartaSans-Bold";
+//               padding: 12px 15px;
+//           }
+//       }
+//       .accordion-collapse {
+//         border-top: none !important;
+//         .accordion-body {
+//           color: #5c5c5c;
+//           font-family: "PlusJakartaSans-SemiBold";
+//           font-size: 16px;
+//           line-height: 22px;
+//         }
+//       }
+//     }
+//   }
+// }
+// }
+
+/* Media Query start */
+@media only screen and (max-width: 991px) {
+  .monthly_wrapper {
+    .free_block {
+      h2 {
+        padding: 35px 0;
+        margin-bottom: 0px;
+      }
+    }
+    .price_block {
+      padding: 20px 15px 80px 15px;
+      h2 {
+        font-size: 42px;
+      }
+    }
+    .price_block.starter_block {
+      padding-top: 40px;
+      padding-bottom: 100px;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .priceBox {
+        margin-bottom: 0px;
+        strong {
+          font-size: 52px;
+          line-height: 60px;
+        }
+      }
+      p {
+          font-size: 16px;
+          margin-bottom: 0;
+      }
+      ul {
+        margin-top: 0;
+      }  
+    }
+    .price_block.professional_block {
+      padding-top: 30px;
+      padding-bottom: 80px;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .priceBox {
+        margin-bottom: 0px;
+        strong {
+          font-size: 52px;
+          line-height: 60px;
+        }
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      ul {
+        margin-top: 0;
+      }  
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .monthly_wrapper {
+    .price_block {
+      li {
+        font-size: 12px;
+      }
+    }
+    .price_block.professional_block, .price_block.starter_block, .price_block {
+      h4 {
+        font-size: 20px;
+        margin-bottom: 0px;
+      }
+      .priceBox {
+        span {
+          font-size: 20px;
+          line-height: 28px;
+        }
+    }
+    }
+  }
+}

@@ -78,6 +78,7 @@
   .btn-btnSecondary {
     border-color: #916cf0;
     color: #916cf0;
+    background-color: transparent;
     &:hover, &:focus, &:active, &:visited, :not(.btn-check)+.btn:active {
         background-image: linear-gradient(to right top, #c74ec7, #b958d6, #a762e4, #916cf0, #7575fb);
         color: #fff !important;
@@ -91,3 +92,7 @@
     }
   }
   
+  .error {
+    color: #E8583C;
+    font-size: 12px;
+  }
