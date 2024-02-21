@@ -68,9 +68,19 @@ header.header {
             border-radius: 8px;
             font-family: 'PlusJakartaSans-SemiBold';
         }
-        button.btnprimary.btn.btn-primary {
+        .buildBtn {
             margin-left: 12px;
             border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #fff !important;
+            &:hover, &:focus, &:active, &:visited, :not(.btn-check)+.btn:active { 
+                color: #916cf0;
+            }
         }
     }
 }
@@ -113,7 +123,7 @@ header.header {
             &::before {
                 display: none;
             }
-            button.btnprimary.btn.btn-primary {
+            .buildBtn {
                 margin-left: 0px;
             }
         }

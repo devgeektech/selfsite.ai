@@ -6,24 +6,32 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import crossEyeIcon from "../../assets/images/crossEyeIcon.svg";
 import './style.scss';
+import Passwordchange from "../passwordsuccessfullychanged";
 
 function Resetpassword(props: any) {
   useEffect(() => {
-    console.log("prop---", props);
+    console.log("prop---jkl", props);
   }, []);
+  
+  const [reset, setReset] = useState(false);
+  const resetfun = () => { setReset(true); };
+  const resetClose = () => setReset(false);
+  
+  const [passwordchange, setPasswordchange] = useState(false);
+  const passwordchangeFun = ()=> {setPasswordchange (true);};
+  const passwordchangeClose = ()=> {setPasswordchange (false)};
+  
+  // const openpasswordchange = () => { setPasswordchange(true)};
+  const openpasswordchange = () => {
+    setReset(false)
+    setPasswordchange(true)
+  }
 
   return (
     <>
       <Modal
-        className="resetpasswordModal"
-        show={props.resetValue}
-        onHide={props.resetClose}
-        keyboard={false}
-        centered
-      >
-        <Modal.Header 
-        // closeButton
-        >
+        className="resetpasswordModal"  show={props.resetValue} onHide={props.resetClose} keyboard={false} centered >
+        <Modal.Header>
           <Modal.Title>Reset  Password</Modal.Title>
           <p>Hello Faryar Ghazanfari </p>
         </Modal.Header>
@@ -67,9 +75,9 @@ function Resetpassword(props: any) {
                 feedbackType="invalid"
               />
             </Form.Group>
-            
             <Button className="btnprimary w-100 signin_btn" 
-                onClick={props.resetClose}
+               //  onClick={props.resetClose}
+                 onClick={openpasswordchange}
             >
               Create
             </Button>
@@ -77,6 +85,9 @@ function Resetpassword(props: any) {
           </Form>
         </Modal.Body>
       </Modal>
+
+      <Passwordchange show={passwordchange} passwordchangeClose={passwordchangeClose}/>
+
     </>
   );
 }

@@ -1,4 +1,4 @@
-.signinModal {
+.signupModal {
     .modal-header {
         flex-direction: column;
         border-bottom: none;
@@ -28,6 +28,17 @@
                 font-size: 13px;
                 font-family: 'PlusJakartaSans-Medium';
             }
+            
+            .form-control {
+                height: 42px;
+                border-radius: 4px;
+                font-size: 13px;
+                font-family: 'PlusJakartaSans-Regular';
+                &:focus {
+                    box-shadow: none;
+                    border-color: #916cf0;
+                }
+            }
             button.showpassword {
                 position: absolute;
                 right: 0;
@@ -37,25 +48,31 @@
                 background: transparent;
                 width: 40px;
             }
-            .form-control {
-                height: 45px;
-                border-radius: 4px;
-                font-size: 13px;
-                font-family: 'PlusJakartaSans-Regular';
-                &:focus {
-                    box-shadow: none;
-                    border-color: #916cf0;
-                }
-            }
             .form-check {
                 label.form-check-label {
                     color: #8C9097;
                 }
             }
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #8C9097;
+                a {
+                    color: #7874FA;
+                }
+                button {
+                    padding: 0 5px;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
             button.signin_btn {
                 border-radius: 12px;
                 height: 45px;
-                font-family: 'PlusJakartaSans-Bold';
+                font-family: 'PlusJakartaSans-Medium';
                 font-size: 16px;
                 margin-bottom: 20px;
             }
@@ -64,9 +81,6 @@
                     font-size: 14px;
                     color: #8C9097;
                     font-family: 'PlusJakartaSans-Regular';
-                    a {
-                        color: #7874FA;
-                    }
                 }
                 button {
                     color: #7874FA;
@@ -81,19 +95,36 @@
                     font-family: 'PlusJakartaSans-Regular';
                     text-transform: uppercase;
                 }
-                button.gmail_login {
-                    color: #636465;
-                    font-family: "PlusJakartaSans-Bold";
-                    font-size: 16px;
-                    background-color: #fff;
-                    box-shadow: 0px 6px 16px -5px rgba(51, 51, 53,0.16);
-                    height: 45px;
-                    width: 100%;
-                    border-radius: 12px;
-                    img {
-                        margin-right: 10px;
-                    }
-                }
+                
+            }
+        }
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #8C9097;
+            margin-bottom: 8px;
+            button {
+                padding: 0 5px;
+                border: none;
+                background-color: transparent;
+                color: #7874FA;
+            }
+        }
+        button.gmail_login {
+            color: #636465;
+            font-family: "PlusJakartaSans-Bold";
+            font-size: 16px;
+            background-color: #fff;
+            box-shadow: 0px 6px 16px -5px rgba(51, 51, 53,0.16);
+            height: 45px;
+            width: 100%;
+            border-radius: 12px;
+            border: none;
+            img {
+                margin-right: 10px;
             }
         }
     }
@@ -107,7 +138,7 @@
     }
 }
 @media only screen and (max-width: 575px) {
-    .signinModal {
+    .signupModal {
         .modal-dialog {
             .modal-content {
                 padding: 30px;

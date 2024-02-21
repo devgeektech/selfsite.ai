@@ -14,6 +14,7 @@ import {
 } from "react-bootstrap";
 import Signin from "../signin";
 import Resetpassword from "../resetpassword";
+import Link from "next/link";
 
 function Header() {
   /* signin state */
@@ -64,7 +65,7 @@ const openReset=()=>{
                 <Button variant="btnSecondary" onClick={signfun}>
                   Sign In
                 </Button>
-                <Button className="btnprimary">Build Your Site</Button>
+                <Link href={"/stepsprocess"} className="btnprimary buildBtn">Build Your Site</Link>
               </div>
             </Navbar.Collapse>
           </Container>
@@ -73,10 +74,10 @@ const openReset=()=>{
 
       {signIn && (
         <Signin
-      signInValue={signIn}
-      handleClose={handleClose}
-      openReset={openReset}
-       />
+          signInValue={signIn}
+          handleClose={handleClose}
+          openReset={openReset}
+        />
       )}
 
 

@@ -1,0 +1,113 @@
+.carouselWrapper {
+  padding-top: 45px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 0.5px solid rgba(195, 187, 186, 0.29);
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: #fff;
+    font-family: "PlusJakartaSans-Regular";
+  }
+}
+.site_info_outer {
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    .site_info {
+        background: #fff;
+        border-radius: 12px;
+
+    .site_info_inner {
+        padding: 20px;
+        border-bottom: 1px solid #E5E7EB;
+        &:last-child {
+            border-bottom: none;
+        }
+        .site_text {
+        h4 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #000;
+            a.previewBtn {
+                color: #77B5F7;
+                margin-left: 10px;
+            }
+        }
+        p {
+            color: rgba(0, 0, 0, 0.49);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        }
+        button.chatBtn {
+        background: transparent;
+        border: none;
+        padding: 0;
+        }
+    }
+    }
+    .search_options {
+        margin-top: 20px;
+        .innersearch {
+            position: relative;
+            input.form-control {
+                height: 54px;
+                border-radius: 12px;
+                padding-left: 50px;
+                &:focus {
+                    border-color: #916cf0;
+                    box-shadow: none;
+                }
+            }
+            button {
+                position: absolute;
+                top: 0;
+                border: none;
+                background: transparent;
+                bottom: 0;
+                padding: 8px 15px;
+            }
+        }
+        .btnsWrapper {
+            margin-top: 20px;
+            button {
+                border-radius: 8px;
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+        ul.side_links {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            li {
+                margin: 5px 0;
+                a {
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'PlusJakartaSans-Regular';
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}

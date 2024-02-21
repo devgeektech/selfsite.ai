@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react'
-import cricleTick from '../../assets/images/cricleTick.svg';
 import deanLogo from '../../assets/images/dean-logo.png';
 import EstateSkillslogo from '../../assets/images/Estate-Skills-logo.png';
 import BallpointMarketing from '../../assets/images/Ballpoint-marketing.png';

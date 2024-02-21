@@ -1,0 +1,52 @@
+.sidebar {
+    .carousel.slide {
+        .carousel-inner {
+            padding: 0 20px;
+            img {
+                border-radius: 8px;
+            }
+            .carousel-caption {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+                color: #fff;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 15px;
+                p {
+                    text-shadow: 0 0 10px #000;
+                    margin-bottom: 8px;
+                    text-align: left;
+                }
+                .radioCheck {
+                    input.form-check-input {
+                        background-image: url('../../assets/images/checkedIcon.svg');
+                        background-size: 20px 20px;
+                        width: 20px;
+                        height: 20px;
+                        &:checked {
+                            background-image: url('../../assets/images/checkIcon.svg');
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        .carousel-control-next, .carousel-control-prev {
+            width: auto;
+            .carousel-control-next-icon, .carousel-control-prev-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .carousel-indicators {
+            display: none;
+        }
+    }
+}

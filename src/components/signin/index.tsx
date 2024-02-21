@@ -7,6 +7,7 @@ import Modal from "react-bootstrap/Modal";
 import crossEyeIcon from "../../assets/images/crossEyeIcon.svg";
 import googleIcon from "../../assets/images/googleIcon.svg";
 import './style.scss';
+import Link from "next/link";
 
 function Signin(props: any) {
 //   const [show, setShow] = useState(props.signInValue);
@@ -21,10 +22,6 @@ function Signin(props: any) {
 
   return (
     <>
-      {/* <Button variant="primary" onClick={handleShow}>
-        Launch static backdrop modal
-      </Button> */}
-
       <Modal
         className="signinModal"
         show={props.signInValue}
@@ -52,7 +49,7 @@ function Signin(props: any) {
                 <button className="showpassword">
                   <Image src={crossEyeIcon} alt="crossEyeIcon" />
                 </button>
-                <div className="error ">Enter the correct Password</div>
+                <div className="error d-none">Enter the correct Password</div>
               </div>
             </Form.Group>
             <Form.Group className="mb-3">
@@ -70,8 +67,9 @@ function Signin(props: any) {
               Sign In
             </Button>
             <div className="btns_text text-center">
+              <button onClick={props.openReset}>Forgot Password ?</button>
               <p>
-                Don't have an account? <button onClick={props.openReset}>Sign Up</button>
+                Don't have an account? <Link href={"/stepsprocess"}>Sign Up</Link>
               </p>
               <p className="or_text text-center">OR</p>
               <button className="gmail_login">
@@ -81,12 +79,6 @@ function Signin(props: any) {
             </div>
           </Form>
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
-        </Modal.Footer> */}
       </Modal>
     </>
   );
