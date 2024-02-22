@@ -13,6 +13,7 @@ import fileSearchIcon from "../../assets/images/fileSearchIcon.svg";
 import globalIcon from "../../assets/images/globalIcon.svg";
 import siteOne from "../../assets/images/siteOne.jpg";
 import siteTwo from "../../assets/images/siteTwo.jpg";
+import siteThree from "../../assets/images/siteThree.jpg";
 
 import "./style.scss";
 import { Form, Button } from "react-bootstrap";
@@ -23,35 +24,45 @@ import Assigndomain from "@/components/assigndomain";
 import Assigneddomain from "@/components/assigneddomain";
 
 export default function Sitesview() {
-
-
   // Domain Modal State
   const [domain, setDomain] = useState(false);
-  const domainfun = () => {setDomain(true);};
+  const domainfun = () => {
+    setDomain(true);
+  };
   const handleDomainClose = () => setDomain(false);
 
   // Buy Domain Modal State
   const [buydomain, setBuydomain] = useState(false);
-  const buydomainfun = () => { setBuydomain(true); };
+  const buydomainfun = () => {
+    setBuydomain(true);
+  };
   const BuydomainClose = () => setBuydomain(false);
   const ref = useRef(false);
-  
-  const openBuydomain = () => { setDomain(false); setBuydomain(true);};
 
+  const openBuydomain = () => {
+    setDomain(false);
+    setBuydomain(true);
+  };
 
-    // Assign Domain Modal State
-        const [assigndomain, setAssignDomain] = useState(false);
-        const assigndomainfun = () => { setAssignDomain(true); };
-        const AssignDomainClose = () => setAssignDomain(false);
+  // Assign Domain Modal State
+  const [assigndomain, setAssignDomain] = useState(false);
+  const assigndomainfun = () => {
+    setAssignDomain(true);
+  };
+  const AssignDomainClose = () => setAssignDomain(false);
 
-    // Assigned Domain Modal State
-    const [assigneddomain, setAssignedDomain] = useState(false);
-    const assigneddomainfun = () => { setAssignedDomain(true); };
-    const AssignedDomainClose = () => setAssignedDomain(false);
-    const ref1 = useRef(false);
+  // Assigned Domain Modal State
+  const [assigneddomain, setAssignedDomain] = useState(false);
+  const assigneddomainfun = () => {
+    setAssignedDomain(true);
+  };
+  const AssignedDomainClose = () => setAssignedDomain(false);
+  const ref1 = useRef(false);
 
-    const openAssignedDomain = () => {setAssignDomain(false); setAssignedDomain(true);}
-
+  const openAssignedDomain = () => {
+    setAssignDomain(false);
+    setAssignedDomain(true);
+  };
 
   return (
     <>
@@ -92,7 +103,7 @@ export default function Sitesview() {
                   </div>
                   <div className="col-md-3 mb-5">
                     <div className="siteblock">
-                      <Image src={siteOne} alt="siteOne" />
+                      <Image src={siteThree} alt="siteThree" />
                       <div className="siteName_select d-flex justify-content-between">
                         <h5>Photography</h5>
                         <div className="radioWrapper">
@@ -114,7 +125,7 @@ export default function Sitesview() {
                   </div>
                   <div className="col-md-3 mb-5">
                     <div className="siteblock">
-                      <Image src={siteOne} alt="siteOne" />
+                      <Image src={siteTwo} alt="siteTwo" />
                       <div className="siteName_select d-flex justify-content-between">
                         <h5>Photography</h5>
                         <div className="radioWrapper">
@@ -125,7 +136,7 @@ export default function Sitesview() {
                   </div>
                   <div className="col-md-3 mb-5">
                     <div className="siteblock">
-                      <Image src={siteOne} alt="siteOne" />
+                      <Image src={siteThree} alt="siteThree" />
                       <div className="siteName_select d-flex justify-content-between">
                         <h5>Photography</h5>
                         <div className="radioWrapper">
@@ -238,12 +249,10 @@ export default function Sitesview() {
                       </Link>
                     </li>
                     <li>
-                      {/* <Link href={"/"}> */}
                       <button onClick={domainfun}>
                         <Image src={globalIcon} alt="globalIcon" />
                         Assign Domain
                       </button>
-                      {/* </Link> */}
                     </li>
                     <li>
                       <button onClick={assigndomainfun}>
@@ -259,20 +268,22 @@ export default function Sitesview() {
         </div>
       </div>
 
-      
-        <Domain
-          domianValue={domain}
-          DomainClose={handleDomainClose}
-          openBuydomain={openBuydomain}
-        />
-      
-        <Assigndomain
-          assigndomianValue={assigndomain}
-          AssignDomainClose={AssignDomainClose}
-          openAssignedDomain={openAssignedDomain}
-        />
-      
-      <Assigneddomain show={assigneddomain} AssignedDomainClose={AssignedDomainClose}/>
+      <Domain
+        domianValue={domain}
+        DomainClose={handleDomainClose}
+        openBuydomain={openBuydomain}
+      />
+
+      <Assigndomain
+        assigndomianValue={assigndomain}
+        AssignDomainClose={AssignDomainClose}
+        openAssignedDomain={openAssignedDomain}
+      />
+
+      <Assigneddomain
+        show={assigneddomain}
+        AssignedDomainClose={AssignedDomainClose}
+      />
       <Buydomain show={buydomain} BuydomainClose={BuydomainClose} />
     </>
   );

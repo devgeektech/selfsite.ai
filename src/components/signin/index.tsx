@@ -12,7 +12,6 @@ import Link from "next/link";
 function Signin(props: any) {
 //   const [show, setShow] = useState(props.signInValue);
   //   const [show, setShow] = useState(props.signInValue);
-
   //   const handleClose = () => setShow(false);
   //   const handleShow = () => setShow(true);
 
@@ -68,8 +67,10 @@ function Signin(props: any) {
             </Button>
             <div className="btns_text text-center">
               <button onClick={props.openReset}>Forgot Password ?</button>
-              <p>
-                Don't have an account? <Link href={"/stepsprocess"}>Sign Up</Link>
+              <p> 
+                Don't have an account? <Link onClick={()=>{props.openSignUp()}} 
+                href={"#"}
+                >Sign Up</Link>
               </p>
               <p className="or_text text-center">OR</p>
               <button className="gmail_login">

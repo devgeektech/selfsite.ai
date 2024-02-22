@@ -1,0 +1,17 @@
+.stepsProcessPage {
+    background: #212529;
+    background-image: url('../../assets/images/processBg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .sites_page-content {
+        .page-content {
+            width: 100%;
+           
+        }
+    }
+}
+footer.footer, header.header {
+    display: none;
+}

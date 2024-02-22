@@ -1,17 +1,35 @@
 .stepsProcessPage {
-    background: #212529;
-    background-image: url('../../assets/images/processBg.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    .sites_page-content {
-        .page-content {
-            width: 100%;
-           
+  background: #212529;
+  background-image: url("../../assets/images/generatebg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  .sites_page-content {
+    .signup_signin_wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 35%;
+      text-align: center;
+      .readyText {
+        font-family: "PlusJakartaSans-Medium";
+        font-size: 42px;
+        font-weight: 500;
+        line-height: 56px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #fff;
+        button{
+            color: #77B5F7;
+            background: transparent;
+            border: none;
         }
+      }
     }
+  }
 }
-footer.footer {
-    display: none;
+footer.footer,
+header.header {
+  display: none;
 }

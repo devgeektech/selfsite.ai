@@ -15,22 +15,54 @@ import {
 import Signin from "../signin";
 import Resetpassword from "../resetpassword";
 import Link from "next/link";
+import Passwordchange from "../passwordsuccessfullychanged";
+import Signup from "../signup";
 
 function Header() {
   /* signin state */
   const [signIn, setSignIn] = useState(false);
-  const signfun = () => { setSignIn(true); };
+  const signfun = () => {
+    setSignIn(true);
+  };
   const handleClose = () => setSignIn(false);
-/* Reset state */
-const [reset, setReset] = useState(false);
-const resetfun = () => { setReset(true); };
-const resetClose = () => setReset(false);
 
-const openReset=()=>{
-  setSignIn(false)
-  setReset(true)
-}
+  const openSignIn = () => { 
+    console.log('jkljkl')
+    setSignIn(true);
+    setSignUp(false)
+  };
 
+
+  /* Reset state */
+  const [reset, setReset] = useState(false);
+  // const resetfun = () => {
+  //   setReset(true);
+  // };
+  const resetClose = () =>{
+    setReset(false);
+    setPasswordChange(true);
+  } 
+  const [changePassword, setPasswordChange] = useState(false);
+  const resetChangePasswordClose = () => setPasswordChange(false);
+
+  const openReset = () => {
+    setSignIn(false);
+    setReset(true);
+  };
+
+// Signup state
+const [signup, setSignUp] = useState(false);
+  const openSignUp = () => { 
+    console.log('jkljkl')
+    setSignIn(false)
+    setSignUp(true);
+  };
+
+  const signUpClose = () =>{
+    setSignUp(false);
+  } 
+  
+//   const handleSignupClose = () => setSignUp(false);
 
   return (
     <>
@@ -65,7 +97,13 @@ const openReset=()=>{
                 <Button variant="btnSecondary" onClick={signfun}>
                   Sign In
                 </Button>
-                <Link href={"/stepsprocess"} className="btnprimary buildBtn">Build Your Site</Link>
+                <Link
+                  href={"/buildsitesteps"}
+                  // onClick={signupfun}
+                  className="btnprimary buildBtn"
+                >
+                  Build Your Site
+                </Link>
               </div>
             </Navbar.Collapse>
           </Container>
@@ -77,18 +115,33 @@ const openReset=()=>{
           signInValue={signIn}
           handleClose={handleClose}
           openReset={openReset}
+          openSignUp={openSignUp}
         />
       )}
 
-
-      {reset && (
-      <Resetpassword
-      resetValue={reset}
-      resetClose={resetClose}
-      />
+      {signup && (
+        <Signup
+          show={signup}
+          hide={signUpClose}
+          openSignIn={openSignIn}
+        />
       )}
 
+      {reset && <Resetpassword resetValue={reset} resetClose={resetClose} />}
 
+      {changePassword && (
+        <Passwordchange
+          changePassword={changePassword}
+          resetChangePasswordClose={resetChangePasswordClose}
+        />
+      )}
+
+      {/* {signup && (
+        <Signup
+          signUpShow={signup}
+          handleSignupClose={handleSignupClose}
+          />
+        )} */}
     </>
   );
 }

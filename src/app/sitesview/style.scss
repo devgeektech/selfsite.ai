@@ -4,7 +4,9 @@
         padding: 50px 70px;
         .page-content {
             width: 100%;
+            padding: 0 20px;
             .siteView {
+                padding-right: 20px;
                 .title_btn {
                      h3 {
                         font-size: 20px;
@@ -85,4 +87,18 @@
 }
 footer.footer {
     display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .sitesPage {
+        .sites_page-content {
+            padding: 30px 15px;
+            .page-content {
+                padding: 0px;
+                .siteView {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
 }

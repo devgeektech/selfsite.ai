@@ -9,19 +9,17 @@ import crossEyeIcon from "../../assets/images/crossEyeIcon.svg";
 import './style.scss';
 
 function Passwordchange(props: any) {
-  const [passwordchange, setPasswordchange] = useState(false);
-  const passwordchangeFun = ()=> {setPasswordchange (true);};
-  const passwordchangeClose = ()=> {setPasswordchange (false)};
-  // useEffect(() => {
-  //   console.log("prop---", props);
-  // }, []);
+
+  // const [passwordchange, setPasswordchange] = useState(false);
+  // const passwordchangeFun = ()=> {setPasswordchange (true);};
+  // const passwordchangeClose = ()=> {setPasswordchange (false)};
 
   return (
     <>
       <Modal
         className="passwordChangeModal"
-        show={props.show}
-        onHide={props.passwordchangeClose}
+        show={props.changePassword}
+        onHide={props.resetChangePasswordClose}
         keyboard={false}
         centered
       >

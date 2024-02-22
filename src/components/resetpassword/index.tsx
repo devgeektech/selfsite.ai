@@ -5,34 +5,49 @@ import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import crossEyeIcon from "../../assets/images/crossEyeIcon.svg";
-import './style.scss';
+import "./style.scss";
 import Passwordchange from "../passwordsuccessfullychanged";
 
 function Resetpassword(props: any) {
   useEffect(() => {
-    console.log("prop---jkl", props);
+    console.log("prop---jkl----", props);
   }, []);
-  
+
   const [reset, setReset] = useState(false);
-  const resetfun = () => { setReset(true); };
+  const resetfun = () => {
+    setReset(true);
+  };
   const resetClose = () => setReset(false);
-  
+
   const [passwordchange, setPasswordchange] = useState(false);
-  const passwordchangeFun = ()=> {setPasswordchange (true);};
-  const passwordchangeClose = ()=> {setPasswordchange (false)};
-  
+  const passwordchangeFun = () => {
+    setPasswordchange(true);
+  };
+  const passwordchangeClose = () => {
+    setPasswordchange(false);
+  };
   // const openpasswordchange = () => { setPasswordchange(true)};
   const openpasswordchange = () => {
-    setReset(false)
-    setPasswordchange(true)
-  }
+    console.log('test -- 31')
+    // setReset(false);
+    setPasswordchange(true);
+  };
+
+  useEffect(()=>{
+    console.log('password change ',passwordchange)
+  },[])
 
   return (
     <>
       <Modal
-        className="resetpasswordModal"  show={props.resetValue} onHide={props.resetClose} keyboard={false} centered >
+        className="resetpasswordModal"
+        show={props.resetValue}
+        onHide={props.resetClose}
+        keyboard={false}
+        centered
+      >
         <Modal.Header>
-          <Modal.Title>Reset  Password</Modal.Title>
+          <Modal.Title>Reset Password</Modal.Title>
           <p>Hello Faryar Ghazanfari </p>
         </Modal.Header>
         <Modal.Body>
@@ -44,7 +59,7 @@ function Resetpassword(props: any) {
                 <button className="showpassword">
                   <Image src={crossEyeIcon} alt="crossEyeIcon" />
                 </button>
-                <div className="error ">Enter the correct Password</div>
+                <div className="error d-none">Enter the correct Password</div>
               </div>
             </Form.Group>
             <Form.Group className="mb-3" controlId="password">
@@ -54,7 +69,7 @@ function Resetpassword(props: any) {
                 <button className="showpassword">
                   <Image src={crossEyeIcon} alt="crossEyeIcon" />
                 </button>
-                <div className="error ">Enter the correct Password</div>
+                <div className="error d-none ">Enter the correct Password</div>
               </div>
             </Form.Group>
             <Form.Group className="mb-3" controlId="password">
@@ -64,7 +79,7 @@ function Resetpassword(props: any) {
                 <button className="showpassword">
                   <Image src={crossEyeIcon} alt="crossEyeIcon" />
                 </button>
-                <div className="error ">Enter the Confirm Password</div>
+                <div className="error d-none ">Enter the Confirm Password</div>
               </div>
             </Form.Group>
             <Form.Group className="mb-3">
@@ -75,19 +90,22 @@ function Resetpassword(props: any) {
                 feedbackType="invalid"
               />
             </Form.Group>
-            <Button className="btnprimary w-100 signin_btn" 
-               //  onClick={props.resetClose}
-                 onClick={openpasswordchange}
+            <Button
+              className="btnprimary w-100 signin_btn"
+              onClick={() => {
+                openpasswordchange();
+                props.resetClose();
+              }}
             >
               Create
             </Button>
-            
           </Form>
         </Modal.Body>
       </Modal>
 
-      <Passwordchange show={passwordchange} passwordchangeClose={passwordchangeClose}/>
-
+      {/* {props?. && (
+        <Passwordchange show={props.changePassword} passwordchangeClose={props.resetChangePasswordClose} />
+      )} */}
     </>
   );
 }

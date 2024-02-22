@@ -10,6 +10,7 @@ import "./style.scss";
 import Link from "next/link";
 
 function Signup(props: any) {
+  console.log('SIGNUP PROPS 0000',props)
   // const [signup, setSignup] = useState(false);
   // const signupfun = () => { setSignup(true); };
   // const signupClose = () => setSignup(false);
@@ -23,7 +24,7 @@ function Signup(props: any) {
       <Modal
         className="signupModal"
         show={props.show}
-        onHide={props.signupClose}
+        onHide={props.hide}
         keyboard={false}
         centered
       >
@@ -81,7 +82,7 @@ function Signup(props: any) {
           </Form>
           <div className="btns_text text-center">
             <p className="text-center">Already have an account?{" "}<button
-              // onClick={props.openReset}
+              onClick={()=>{props.openSignIn()}}
               >
                 Sign In
               </button>

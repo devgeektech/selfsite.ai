@@ -9,10 +9,25 @@
         }
         .page-content {
             width: 100%;
-            
+            padding: 0 20px;
         }
     }
 }
 footer.footer {
     display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .url-bar {
+        padding: 30px 0px 30px 0px;
+    }
+    .dashboardPage {
+        .sidebar_page-content {
+            flex-direction: column;
+            .sidebarWrapper {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
 }

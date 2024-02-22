@@ -9,6 +9,12 @@ header.header {
         background: transparent;
         border: none;
       }
+      button.navbar-toggler {
+        span.navbar-toggler-icon {
+          background-image: url('../../assets/images/menuToggle.svg');
+          background-size: auto;
+        }
+      }
       .navbar-collapse {
         button.btnThemeChange {
           background: transparent;
